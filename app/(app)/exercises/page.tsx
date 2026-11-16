@@ -21,7 +21,7 @@ export default async function ExercisesPage({ searchParams }: PageProps) {
 
             <ExerciseFilters />
 
-            {}
+            {/* La key reinicia el Suspense en cada búsqueda y vuelve a mostrar el esqueleto */}
             <Suspense
                 key={`${q ?? ''}|${category ?? ''}|${maxDuration ?? ''}`}
                 fallback={<ExerciseGridSkeleton />}

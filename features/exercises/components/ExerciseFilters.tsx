@@ -28,6 +28,7 @@ export function ExerciseFilters() {
         if (text === urlText) return;
         const timer = setTimeout(() => updateParam('q', text), 300);
         return () => clearTimeout(timer);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text]);
 
     return (
@@ -64,7 +65,7 @@ export function ExerciseFilters() {
                 ))}
             </div>
 
-            {}
+            {/* Reto 1: filtro por duración que también vive en la URL */}
             <label className="flex items-center gap-2">
                 <span className="text-sm opacity-70">Duración</span>
                 <select
