@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { authService } from '../services/auth.service';
 
@@ -74,6 +75,11 @@ export function LoginForm() {
                     </button>
                 </fieldset>
             </form>
+
+            <p className="text-sm text-center mt-4">
+                ¿No tienes cuenta?{' '}
+                <Link href="/register" className="link link-primary">Crear cuenta</Link>
+            </p>
         </section>
     );
 }
